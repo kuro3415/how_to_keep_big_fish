@@ -50,3 +50,6 @@
   メイン機能実装 : 10/7 - 11/7〆切
   β版をRUNTEQ内リリース（MVP） ： 11/7〆切
   本番リリース : 11月末
+
+■画面遷移図のリンク
+  https://www.figma.com/file/pNYjdWbKNaebhz5hN26O9y/keep_big_fish?node-id=3%3A21
