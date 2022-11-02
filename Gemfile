@@ -66,3 +66,10 @@ group :development do
   # gem "spring"
 end
 
+gem "sorcery"
+
+gem "slim-rails"
+# ERB形式のファイルをslim形式に変換してくれる
+gem "html2slim"
+
+gem "jquery-rails"
