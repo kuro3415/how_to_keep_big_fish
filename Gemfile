@@ -73,3 +73,10 @@ gem "slim-rails"
 gem "html2slim"
 
 gem "jquery-rails"
+
+# 管理画面&機能
+gem "rails_admin", "~> 3.0"
+gem "sassc-rails"
+
+# 認証機能
+gem "cancancan"
