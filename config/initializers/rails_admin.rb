@@ -1,6 +1,12 @@
 RailsAdmin.config do |config|
   config.asset_source = :sprockets
 
+  config.authenticate_with do
+    require_login
+    redirect_to main_app.root_path unless current_user.admin?
+  end
+  config.current_user_method(&:current_user)
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -10,7 +16,7 @@ RailsAdmin.config do |config|
   # config.current_user_method(&:current_user)
 
   ## == CancanCan ==
-  # config.authorize_with :cancancan
+  config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -39,4 +45,6 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.parent_controller = 'ApplicationController'
 end
