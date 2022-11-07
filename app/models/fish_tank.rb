@@ -1,0 +1,2 @@
+class FishTank < ApplicationRecord
+end
