@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_05_234718) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_06_010056) do
   create_table "fish", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "scientific_name"
@@ -25,6 +25,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_05_234718) do
     t.string "fish_image_m"
     t.string "fish_image_l"
     t.string "fish_image_xl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fish_tanks", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "fish_tank_image_front"
+    t.string "fish_tank_image_sideways"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
