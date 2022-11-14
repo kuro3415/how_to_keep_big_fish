@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_13_141427) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_14_123744) do
   create_table "articles", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "fish_id"
-    t.bigint "fish_tank_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["fish_id"], name: "index_articles_on_fish_id"
-    t.index ["fish_tank_id"], name: "index_articles_on_fish_tank_id"
   end
 
   create_table "fish", charset: "utf8mb4", force: :cascade do |t|
@@ -36,6 +34,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_13_141427) do
     t.string "fish_image_xl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fish_tank_articles", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "fish_tank_id"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_fish_tank_articles_on_article_id"
+    t.index ["fish_tank_id"], name: "index_fish_tank_articles_on_fish_tank_id"
   end
 
   create_table "fish_tanks", charset: "utf8mb4", force: :cascade do |t|
@@ -58,5 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_13_141427) do
   end
 
   add_foreign_key "articles", "fish"
-  add_foreign_key "articles", "fish_tanks"
+  add_foreign_key "fish_tank_articles", "articles"
+  add_foreign_key "fish_tank_articles", "fish_tanks"
 end
