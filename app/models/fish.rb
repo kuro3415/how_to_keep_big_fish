@@ -1,7 +1,5 @@
 class Fish < ApplicationRecord
   validates :name, presence: true
-  
-  has_one :article
 
   has_one :article
 
