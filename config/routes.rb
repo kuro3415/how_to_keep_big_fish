@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  # 投稿一覧が出来るまでの（仮）
-  root 'users#new'
+  root 'top#index'
 
   resources :users, only: %i[new create]
 
