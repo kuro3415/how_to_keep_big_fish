@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root 'top#index'
 
   resources :users, only: %i[new create]
-  resources :fish, only: %i[show]
+  resources :articles, only: %i[show index]
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
