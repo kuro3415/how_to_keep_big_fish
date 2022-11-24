@@ -1,4 +1,15 @@
-img class='img'
+div class='overlap'
+  img class='fish_tank'
+  div class='fish'
+    img class='fish'
+
+p
+  label 魚サイズ
+  br
+  select name='fish'
+    option value="#{@article.fish.fish_image_s}" selected='selected' 10cm
+    option value="#{@article.fish.fish_image_m}" 60cm
+    option value="#{@article.fish.fish_image_l}" 120cm
 
 p 
   label 水槽サイズ
