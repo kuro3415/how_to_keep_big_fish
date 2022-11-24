@@ -1,0 +1,7 @@
+- @articles.each do |article|
+  div.col
+    div.card.h-100 style='width: 18rem;'
+      img.card-img-top src="#{article.fish.fish_image_l}"
+        div.card-body
+          p.card-title
+            a href="#{article_path(article)}" =article.fish.name

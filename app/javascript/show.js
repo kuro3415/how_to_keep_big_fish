@@ -17,7 +17,7 @@ $(function(){
       var select_width2 = $('select[name="width"]').val();
       var select_depth2 = $('select[name="depth"]').val();
       var select_length2 = $('select[name="length"]').val();
-      $('.fish_tank').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x${select_depth2}x${select_length2}.jpg`);
+      $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x${select_depth2}x${select_length2}.jpg`);
     });
   }
 
@@ -28,8 +28,8 @@ $(function(){
   let select_fish = $('select[name="fish"]').val();
 
   //各選択済みのセレクトのvalueを組み合わせて画像を表示させたい
-  $('.fish_tank').attr('src', `/images/fish_tanks/${direction}/` + `${select_width.value}x${select_depth.value}x${select_length.value}.jpg`);
-  $('.fish').attr('src', `${select_fish}`);
+  $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width.value}x${select_depth.value}x${select_length.value}.jpg`);
+  $('.fish_img').attr('src', `${select_fish}`);
 
   //セレクタを変更したら画像の変更イベントを発生させたい
   $('select').change(function(){
@@ -37,7 +37,7 @@ $(function(){
     var select_depth2 = $('select[name="depth"]').val();
     var select_length2 = $('select[name="length"]').val();
     var select_fish2 = $('select[name="fish"]').val();
-    $('.fish_tank').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x${select_depth2}x${select_length2}.jpg`);
-    $('.fish').attr('src', `${select_fish2}`);
+    $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x${select_depth2}x${select_length2}.jpg`);
+    $('.fish_img').attr('src', `${select_fish2}`);
   });
 });

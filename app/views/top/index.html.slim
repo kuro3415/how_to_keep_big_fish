@@ -1,5 +1,3 @@
-h1 TOPページ(後で消す)
-
 p
   |
     大型魚・古代魚は<br>
@@ -7,3 +5,11 @@ p
     どれくらいの水槽が必要になる？
 
 p 一覧から気になる魚を見てみましょう
+
+- if @articles.present?
+  div.row.row-cols-1.row-cols-md-3.g-4
+    = render 'articles/article'
+- else
+  p 記事が一つもない
+
+= link_to 'New User', '#', class: 'btn btn-primary'
