@@ -1,0 +1,35 @@
+div class='overlap'
+  img class='fish_tank'
+  div class='fish'
+    img class='fish'
+
+p
+  label 魚サイズ
+  br
+  select name='fish'
+    option value="#{@article.fish.fish_image_s}" selected='selected' 10cm
+    option value="#{@article.fish.fish_image_m}" 60cm
+    option value="#{@article.fish.fish_image_l}" 120cm
+
+p 
+  label 水槽サイズ
+  br
+  select name='width'
+    option value='90' 90
+    option value='120' selected='selected' 120 
+    option value='150' 150
+    option value='180' 180
+  label ×
+  select name='depth'
+    option value='45' 45
+    option value='60' selected='selected' 60
+    option value='90' 90
+  label ×
+  select name='length'
+    option value='45' 45
+    option value='60' selected='selected' 60
+    option value='90' 90
+
+p
+  input type='radio' name="type" value="front" checked='checked' 正面
+  input type='radio' name="type" value="side" 側面

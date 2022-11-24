@@ -1,0 +1,23 @@
+h1 魚詳細ページ
+
+p= @article.fish.name
+
+= render 'shared/image_display'
+
+table
+  tr
+    th 学名
+    td= @article.fish.scientific_name
+  tr
+    th 最大体長
+    td #{@article.fish.body_length}cm
+  tr
+    th 湿度
+    td= @article.fish.temperature
+  tr
+    th 水質
+    td= @article.fish.water_quality
+  tr
+    th 特徴&ポイント
+    td= @article.fish.body
+
