@@ -1,6 +1,18 @@
-h1 AppName
-nav
-  - if logged_in?
-    = link_to 'ログアウト', logout_path, method: :delete
-  - else
-    = link_to 'ログイン', login_path
+div.sticky-top
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    div.container-fluid
+      a.navbar-brand.mb-1.h1 href=root_path HowToKeep BigFish
+      button.navbar-toggler type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'
+        span.navbar-toggler-icon
+      div.collapse.navbar-collapse id='navbarSupportedContent'
+        ul.navbar-nav.ms-auto
+          - if logged_in?
+            li.nav-item
+              a.nav-link href='#' マイページ
+            li.nav-item
+              a.nav-link href=logout_path data-method='delete' ログアウト
+          - else
+            li.nav-item
+              a.nav-link href='#' 新規登録
+            li.nav-item
+              a.nav-link href=login_path ログイン
