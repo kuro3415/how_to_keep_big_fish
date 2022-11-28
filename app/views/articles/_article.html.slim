@@ -1,7 +1,7 @@
 - @articles.each do |article|
-  div.col
-    div.card.h-100 style='width: 18rem;'
+  div.col-lg.d-flex.align-items-center.justify-content-center
+    div.card.h-100 style='width: 20rem;'
       img.card-img-top src="#{article.fish.fish_image_l}"
-        div.card-body
+        div.card-body.d-flex.align-items-center.justify-content-center
           p.card-title
             a href="#{article_path(article)}" =article.fish.name
