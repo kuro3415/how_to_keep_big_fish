@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
   skip_before_action :require_login, only: %i[show index]
+  before_action :set_article
 
   def show
-    @article = Article.find_by(params[:id])
   end
 
   def index
@@ -11,6 +11,6 @@ class ArticlesController < ApplicationController
   private
   
   def set_article
-    @article = Article.find_by(params[:id])
+    @article = Article.find(params[:id])
   end
 end

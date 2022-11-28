@@ -80,3 +80,6 @@ gem "sassc-rails"
 
 # 認証機能
 gem "cancancan"
+
+# レイアウト用
+gem "cssbundling-rails"
