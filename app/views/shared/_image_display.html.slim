@@ -1,36 +1,49 @@
 div.container
-  div.position-relative
-    img.fish_tank_img
-    div.position-absolute.top-0
-      img.fish_img
-
-p
-  label 魚サイズ
-  br
-  select name='fish'
-    option value="#{@article.fish.fish_image_s}" selected='selected' 10cm
-    option value="#{@article.fish.fish_image_m}" 60cm
-    option value="#{@article.fish.fish_image_l}" 120cm
-
-p 
-  label 水槽サイズ
-  br
-  select name='width'
-    option value='90' 90
-    option value='120' selected='selected' 120 
-    option value='150' 150
-    option value='180' 180
-  label ×
-  select name='depth'
-    option value='45' 45
-    option value='60' selected='selected' 60
-    option value='90' 90
-  label ×
-  select name='length'
-    option value='45' 45
-    option value='60' selected='selected' 60
-    option value='90' 90
-
-p
-  input type='radio' name="type" value="front" checked='checked' 正面
-  input type='radio' name="type" value="side" 側面
+  div.position-relative.d-flex.align-items-center.justify-content-center
+    span.border.border-dark
+      img.fish_tank_img
+      div.position-absolute.top-0
+        img.fish_img
+  div.d-flex.align-items-center.justify-content-center
+    div.row
+      div.col-auto
+        div.d-flex.align-items-center.justify-content-center
+          p.mt-4 魚サイズ
+        div.row.g-1
+          p.px-1
+            div.col
+              select.form-select name='fish'
+                option value="#{@article.fish.fish_image_s}" selected='selected' 10cm
+                option value="#{@article.fish.fish_image_m}" 60cm
+                option value="#{@article.fish.fish_image_l}" 120cm
+      div.col-auto.mx-3
+        div.d-flex.align-items-center.justify-content-center
+          p.mt-4 水槽サイズ
+        div.row.g-1
+            p.px-5
+              div.col-4
+                select.form-select name='width'
+                  option value='90' 90cm
+                  option value='120' selected='selected' 120cm
+                  option value='150' 150cm
+                  option value='180' 180cm
+              div.col-4
+                select.form-select  name='depth'
+                  option value='45' 45cm
+                  option value='60' selected='selected' 60cm
+                  option value='90' 90cm
+              div.col-4
+                select.form-select  name='length'
+                  option value='45' 45cm
+                  option value='60' selected='selected' 60cm
+                  option value='90' 90cm
+      div.col-auto.d-flex.align-items-center.justify-content-center.mt-5
+        div.row
+          div.d-flex.align-items-center.justify-content-center
+            div.form-check
+              input.form-check-input type='radio' name="type" value="front" checked='checked'
+              label.form-check-label style='display:block;' 正面
+          div.d-flex.align-items-center.justify-content-center
+            div.form-check
+              input.form-check-input type='radio' name="type" value="side"
+              label.form-check-label style='display:block;' 側面
