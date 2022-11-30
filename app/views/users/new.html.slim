@@ -3,10 +3,10 @@ h1 ユーザー登録ページ（仮）
   = f.label :name
   = f.text_field :name
   p
-  = f.label :email
+  = f.label :email, User.human_attribute_name(:email)
   = f.text_field :email
   p
-  = f.label :password
+  = f.label :password, User.human_attribute_name(:password)
   = f.password_field :password
   p
   = f.label :password_confirmation
