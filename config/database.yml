@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: how_to_keep_big_fish_production
-  username: how_to_keep_big_fish
-  password: <%= ENV["HOW_TO_KEEP_BIG_FISH_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
