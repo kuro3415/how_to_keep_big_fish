@@ -10,14 +10,16 @@ $(function(){
       if(val == 0){
         direction = 'side';
         val++;
+        var select_depth2 = $('select[name="depth"]').val();
+        var select_length2 = $('select[name="length"]').val();
+        $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `120x${select_depth2}x${select_length2}.jpg`);
       }else{
         direction = 'front';
         val =0;
+        var select_width2 = $('select[name="width"]').val();
+        var select_length2 = $('select[name="length"]').val();
+        $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x60x${select_length2}.jpg`);
       }
-      var select_width2 = $('select[name="width"]').val();
-      var select_depth2 = $('select[name="depth"]').val();
-      var select_length2 = $('select[name="length"]').val();
-      $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x${select_depth2}x${select_length2}.jpg`);
     });
   }
 
@@ -33,11 +35,19 @@ $(function(){
 
   //セレクタを変更したら画像の変更イベントを発生させたい
   $('select').change(function(){
-    var select_width2 = $('select[name="width"]').val();
-    var select_depth2 = $('select[name="depth"]').val();
-    var select_length2 = $('select[name="length"]').val();
-    var select_fish2 = $('select[name="fish"]').val();
-    $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x${select_depth2}x${select_length2}.jpg`);
-    $('.fish_img').attr('src', `${select_fish2}`);
+    if(direction == 'front'){
+      var select_width2 = $('select[name="width"]').val();
+      var select_length2 = $('select[name="length"]').val();
+      var select_fish2 = $('select[name="fish"]').val();
+      $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `${select_width2}x60x${select_length2}.jpg`);
+      $('.fish_img').attr('src', `${select_fish2}`);
+    }
+    else{
+      var select_depth2 = $('select[name="depth"]').val();
+      var select_length2 = $('select[name="length"]').val();
+      var select_fish2 = $('select[name="fish"]').val();
+      $('.fish_tank_img').attr('src', `/images/fish_tanks/${direction}/` + `120x${select_depth2}x${select_length2}.jpg`);
+      $('.fish_img').attr('src', `${select_fish2}`);
+    }
   });
 });
