@@ -83,3 +83,5 @@ gem "cancancan"
 
 # レイアウト用
 gem "cssbundling-rails"
+
+gem "rails-i18n"
