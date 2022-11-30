@@ -13,9 +13,9 @@ div.container
           p.px-1
             div.col
               select.form-select name='fish'
-                option value="#{@article.fish.fish_image_s}" selected='selected' 10cm
-                option value="#{@article.fish.fish_image_m}" 60cm
-                option value="#{@article.fish.fish_image_l}" 120cm
+                option value="#{@article.fish.fish_image_s}" selected='selected' #{@article.fish.minimum}cm
+                option value="#{@article.fish.fish_image_m}" #{@article.fish.medium}cm
+                option value="#{@article.fish.fish_image_l}" #{@article.fish.maximum}cm
       div.col-auto.mx-3
         div.d-flex.align-items-center.justify-content-center
           p.mt-4 水槽サイズ
@@ -23,8 +23,8 @@ div.container
             p.px-5
               div.col-4
                 select.form-select name='width'
-                  option value='90' 90cm
-                  option value='120' selected='selected' 120cm
+                  option value='90' selected='selected' 90cm
+                  option value='120' 120cm
                   option value='150' 150cm
                   option value='180' 180cm
               div.col-4
