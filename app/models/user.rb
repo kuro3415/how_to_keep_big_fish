@@ -10,4 +10,6 @@ class User < ApplicationRecord
 
   # 管理権限判断用
   enum role: { general: 0, admin: 1 }
+
+  has_many :posts, dependent: :destroy
 end
