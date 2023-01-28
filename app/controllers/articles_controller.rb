@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   before_action :set_article
 
   def show
+    @post = Post.new
   end
 
   def index

@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/show'
-  get 'posts/new'
-  get 'posts/create'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -11,7 +8,9 @@ Rails.application.routes.draw do
   root 'top#index'
 
   resources :users, only: %i[show new create]
-  resources :articles, only: %i[show index]
+  resources :articles, only: %i[show index] do
+    resources :posts, only: %i[show create]
+  end
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
