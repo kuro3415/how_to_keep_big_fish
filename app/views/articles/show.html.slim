@@ -26,6 +26,8 @@ div.container
 div.container
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
     h2 ユーザーの飼育魚
+    - if @posts.present?
+      = render 'posts/post'
 
 div.container
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3

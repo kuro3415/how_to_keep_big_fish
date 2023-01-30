@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   before_action :set_article
 
   def show
+    @posts = Post.where(article_id: @article.id)
     @post = Post.new
   end
 
