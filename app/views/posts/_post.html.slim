@@ -1,3 +1,6 @@
 - @posts.each do |post|
-  img src="#{post.post_image}" width='300' height='200'
-  p #{post.body}
+  div.row.mb-5
+    div.col-md-3.d-flex.align-items-center.justify-content-center
+      img src="#{post.post_image}" width='300' height='200'
+    div.col-md-9.box1
+      p #{post.body}

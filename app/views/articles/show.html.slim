@@ -4,7 +4,7 @@ div.container
 
 = render 'shared/image_display'
 
-div.container
+div.container.container-m
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3.mx-5
     table.table
       tr
@@ -23,11 +23,11 @@ div.container
         th style="white-space: nowrap;" 特徴&ポイント
         td= @article.fish.body
 
-div.container
+div.container.container-m
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
     h2 ユーザーの飼育魚
-    - if @posts.present?
-      = render 'posts/post'
+  - if @posts.present?
+    = render 'posts/post'
 
 div.container
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
