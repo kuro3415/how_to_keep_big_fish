@@ -5,7 +5,7 @@ div.container
 = render 'shared/image_display'
 
 div.container.container-m
-  div.d-flex.align-items-center.justify-content-center.mt-5.mb-3.mx-5
+  div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
     table.table
       tr
         th 学名
@@ -32,12 +32,11 @@ div.container.container-m
 div.container
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
     h2 投稿する
-  div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
+  div.d-flex.align-items-center.justify-content-center.mt-2.mb-3
     = form_with model: [@article, @post], local: true do |f|
-      = f.label :post_image
-      = f.file_field :post_image, class: 'form-control'
-      p
+      = f.label :post_image, "画像をアップロード", class: "image_input_btn"
+      = f.file_field :post_image, class: 'form-control image_form'
       = f.label :body
-      = f.text_area :body, class: 'form-control'
-      p
-      = f.submit "投稿", class: 'btn btn-primary'
+      = f.text_area :body, class: 'form-control', cols: "60", rows: "6"
+      div.d-flex.align-items-center.justify-content-center.mt-4
+        = f.submit "投稿", class: 'btn btn-primary'
