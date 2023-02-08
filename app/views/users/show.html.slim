@@ -1,4 +1,4 @@
-div.container
+div.container.container-m
   div.d-flex.align-items-center.justify-content-center.mt-5
     table.table
       tr
@@ -8,9 +8,11 @@ div.container
         th メールアドレス
         td= @user.email
 
-div.container
-  div.d-flex.align-items-center.justify-content-center.mt-5
+div.container.container-m
+  div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
     h2 投稿した飼育魚
+  - if @posts.present?
+    = render 'posts/post'
 
 div.container
   div.d-flex.align-items-center.justify-content-center.mt-5

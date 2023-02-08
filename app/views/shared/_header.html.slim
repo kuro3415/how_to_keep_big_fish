@@ -8,7 +8,7 @@ div.sticky-top
         ul.navbar-nav.ms-auto
           - if logged_in?
             li.nav-item
-              a.nav-link href='#' マイページ
+              a.nav-link href=user_path(current_user) マイページ
             li.nav-item
               a.nav-link href=logout_path data-method='delete' ログアウト
           - else
