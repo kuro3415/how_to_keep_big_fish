@@ -1,3 +1,20 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'show';
+
+.container-m {
+  width: 75%;
+}
+
+.box1 {
+  margin: 0.1rem 0;
+  padding: 0.3rem;
+  border: solid 1px #000000;
+}
+
+.box2 {
+  margin: 0.1rem 0;
+  padding: 0.3rem;
+  border: solid 1px #000000;
+  border-left: none;
+}
