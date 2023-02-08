@@ -3,4 +3,5 @@ class Article < ApplicationRecord
   
   has_many :fish_tank_article, dependent: :destroy
   has_many :fish_tank, through: :fish_tank_article
+  has_many :posts, dependent: :destroy
 end

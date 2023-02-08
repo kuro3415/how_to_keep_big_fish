@@ -88,3 +88,7 @@ gem "cancancan"
 gem "cssbundling-rails"
 
 gem "rails-i18n"
+
+# 画像用
+gem "carrierwave"
+gem "mini_magick"

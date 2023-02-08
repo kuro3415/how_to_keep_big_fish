@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_29_194020) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_26_183527) do
   create_table "articles", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "fish_id"
     t.datetime "created_at", null: false
@@ -58,6 +58,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_194020) do
   create_table "fishes", charset: "utf8mb4", force: :cascade do |t|
   end
 
+  create_table "posts", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "article_id"
+    t.string "body"
+    t.string "post_image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_posts_on_article_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -72,4 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_194020) do
   add_foreign_key "articles", "fish"
   add_foreign_key "fish_tank_articles", "articles"
   add_foreign_key "fish_tank_articles", "fish_tanks"
+  add_foreign_key "posts", "articles"
+  add_foreign_key "posts", "users"
 end
