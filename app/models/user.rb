@@ -12,4 +12,8 @@ class User < ApplicationRecord
   enum role: { general: 0, admin: 1 }
 
   has_many :posts, dependent: :destroy
+
+  def own?(object)
+    id == object.user_id
+  end
 end
