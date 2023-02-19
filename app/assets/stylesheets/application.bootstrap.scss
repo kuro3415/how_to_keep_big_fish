@@ -26,3 +26,16 @@ body {
 td {
   font-family: "Comic Sans MS", "M PLUS Rounded 1c";
 }
+
+html {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
