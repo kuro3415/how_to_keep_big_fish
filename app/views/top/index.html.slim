@@ -1,16 +1,15 @@
-div.container
-  div
-    div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
-      h2 
-        |
-          大型魚・古代魚は<br>
-          どれくらいのサイズに成長する？<br>
-          どれくらいの水槽が必要になる？
-    div.d-flex.align-items-center.justify-content-center.mb-5
-      h1 一覧から気になる魚を見てみましょう
-    div.d-flex.align-items-center.justify-content-center
-      - if @articles.present?
-        div.row.row-cols-1.row-cols-md-3.g-4
-          = render 'articles/article'
-      - else
-        p 記事が一つもない
+div.container.px-4.px-lg-5
+  div.row.gx-4.gx-lg-5.align-items-center.my-5
+      div.col-lg
+        h1.d-flex.align-items-center.justify-content-center HowToKeep BigFish
+        p.d-flex.align-items-center.justify-content-center
+          |
+            大型魚・古代魚は<br>
+            どれくらいのサイズに成長する？<br>
+            どれくらいの水槽が必要になる？
+        h4.d-flex.align-items-center.justify-content-center 一覧から気になる魚を見てみましょう
+  div.row.gx-4.gx-lg-5
+    - if @articles.present?
+        = render 'articles/article'
+    - else
+      p 記事が一つもない
