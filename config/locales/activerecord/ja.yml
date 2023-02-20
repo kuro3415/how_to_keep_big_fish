@@ -13,9 +13,11 @@ ja:
         name: 名前
         email: メールアドレス
         password: パスワード
+        password_confirmation: パスワード確認
       post:
         content: 説明
         image: 画像
+        body: 本文
       comment:
         comment: コメント内容
       contact:

@@ -23,10 +23,6 @@ div.container.container-m
         th style="white-space: nowrap;" 特徴&ポイント
         td= @article.fish.body
 
-div.container.container-m
-  div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
-    h2 ユーザーの飼育魚
-  - if @posts.present?
-    = render 'posts/post'
+= render 'posts/post'
 
 = render 'shared/form_post'
