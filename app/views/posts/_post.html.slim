@@ -11,6 +11,6 @@ div.container.container-m
         div.d-flex.justify-content-end
           - if current_user&.own?(post)
             div.mx-2.mt-2
-              = link_to '編集', edit_article_post_path(@article, post), class: 'btn btn-outline-secondary btn-block'
+              = link_to '編集', edit_article_post_path(post.article, post), class: 'btn btn-outline-secondary btn-block'
             div.mt-2
-              = link_to '削除', article_post_path(@article, post), method: :delete, class: 'btn btn-outline-secondary btn-block'
+              = link_to '削除', article_post_path(post.article, post), method: :delete, class: 'btn btn-outline-secondary btn-block'
