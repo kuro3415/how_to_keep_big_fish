@@ -5,23 +5,23 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
+    @article = @post.article
     if @post.save
-      redirect_to root_path
+      redirect_to request.referer
     else
-      @article = Article.find(@post.article_id)
       render 'articles/show'
     end
   end
 
   def edit
     @post = Post.find(params[:id])
-    @article = Article.find(@post.article_id)
+    @article = @post.article
   end
 
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to request.referer
+      redirect_to user_path(current_user)
     else
       render :edit
     end
