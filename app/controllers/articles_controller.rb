@@ -7,11 +7,10 @@ class ArticlesController < ApplicationController
     @post = Post.new
   end
 
-  def index
-  end
+  def index; end
 
   private
-  
+
   def set_article
     @article = Article.find(params[:id])
   end
