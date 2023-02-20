@@ -1,11 +1,17 @@
 div.container
   div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
     h2 投稿する
-  div.d-flex.align-items-center.justify-content-center.mt-2.mb-3
-    = form_with model: [@article, @post], local: true do |f|
-      = f.label :post_image, "画像をアップロード", class: "image_input_btn"
-      = f.file_field :post_image, class: 'form-control image_form'
-      = f.label :body
-      = f.text_area :body, class: 'form-control', cols: "60", rows: "6"
-      div.d-flex.align-items-center.justify-content-center.mt-4
-        = f.submit "投稿", class: 'btn btn-primary'
+  div.d-flex.align-items-center.justify-content-center
+    div.border.col-7.mt-2
+      div.row
+        div.col-md
+          = form_with model: [@article, @post], local: true do |f|
+            div.form-group.m-3.mt-4
+              = f.label :post_image, "画像をアップロード"
+              = f.file_field :post_image, class: 'form-control'
+            div.form-group.m-3
+              = f.label :body
+              = f.text_area :body, class: 'form-control', cols: "60", rows: "6"
+            div.row.center-block.text-center
+              div.form-group.m-3
+                = f.submit '投稿', class: 'btn btn-outline-secondary btn-block col-3'

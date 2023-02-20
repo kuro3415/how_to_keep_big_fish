@@ -1,20 +1,37 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
-@import 'show';
 
 .container-m {
   width: 75%;
 }
 
-.box1 {
-  margin: 0.1rem 0;
+.box {
   padding: 0.3rem;
-  border: solid 1px #000000;
+  border: solid 1px #777777;
+  border-radius: 5px;
 }
 
-.box2 {
-  margin: 0.1rem 0;
-  padding: 0.3rem;
-  border: solid 1px #000000;
-  border-left: none;
+body {
+  font-family: "Comic Sans MS", "HiraMinProN-W3", "sans-serif";
+}
+
+td {
+  font-family: "Comic Sans MS", "M PLUS Rounded 1c";
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.post-img {
+  border: solid 1px #777777;
 }
