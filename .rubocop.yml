@@ -1,0 +1,27 @@
+inherit_from:
+  - .rubocop_todo.yml
+
+AllCops:
+  # 最新のルールを適用
+  NewCops: enable
+  Exclude:
+    - 'Gemfile'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/environments/*'
+    - 'config/boot.rb'
+    - 'config/puma.rb'
+    - 'config.ru'
+    - 'config/initializers/filter_parameter_logging.rb'
+    - 'config/initializers/sorcery.rb'
+
+# クラスにコメントを残さなくても良い
+Style/Documentation:
+  Enabled: false
+
+# 文字列のfreezeいらない（自動でされているはず）
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/GlobalStdStream:
+  Exclude:
+    - 'config/environments/production.rb'
