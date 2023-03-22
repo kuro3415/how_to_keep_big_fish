@@ -8,6 +8,15 @@ html
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
+    
+    / Googleアナリティクスのトラッキングコード
+    script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-PZN8X0DLK0"
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PZN8X0DLK0');
   body
     = render 'shared/header'
     = yield
