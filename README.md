@@ -45,7 +45,7 @@
   README~ER図作成 : 10/7〆切<br>
   メイン機能実装 : 10/7 - 12/28〆切<br>
   β版をリリース（MVP） ： 12/28〆切<br>
-  本番リリース : 12月中ば<br>
+  本番リリース : 1月中旬<br>
 
 ■画面遷移図のリンク<br>
   https://www.figma.com/file/pNYjdWbKNaebhz5hN26O9y/keep_big_fish?node-id=3%3A21
