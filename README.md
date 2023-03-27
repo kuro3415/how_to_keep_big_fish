@@ -43,9 +43,9 @@
 ■スケジュール<br>
   企画〜技術調査 : 10/1〆切<br>
   README~ER図作成 : 10/7〆切<br>
-  メイン機能実装 : 10/7 - 11/7〆切<br>
-  β版をRUNTEQ内リリース（MVP） ： 11/7〆切<br>
-  本番リリース : 11月末<br>
+  メイン機能実装 : 10/7 - 12/28〆切<br>
+  β版をリリース（MVP） ： 12/28〆切<br>
+  本番リリース : 12月中ば<br>
 
 ■画面遷移図のリンク<br>
   https://www.figma.com/file/pNYjdWbKNaebhz5hN26O9y/keep_big_fish?node-id=3%3A21
