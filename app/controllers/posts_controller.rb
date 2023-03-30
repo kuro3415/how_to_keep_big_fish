@@ -7,8 +7,9 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     @article = @post.article
     if @post.save
-      redirect_to request.referer
+      redirect_to request.referer, success: t('.success')
     else
+      flash[:danger] = t('.fail')
       render 'articles/show'
     end
   end
@@ -21,8 +22,9 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to user_path(current_user)
+      redirect_to user_path(current_user), success: t('.success')
     else
+      flash[:danger] = t('.fail')
       render :edit
     end
   end
@@ -30,7 +32,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to request.referer
+    redirect_to request.referer, success: t('.success')
   end
 
   private
