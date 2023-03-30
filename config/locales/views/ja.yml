@@ -7,7 +7,24 @@ ja:
     new:
       title: 'ユーザー登録'
       to_login_page: 'ログイン'
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
   user_sessions:
     new:
       title: 'ログイン'
       to_register_page: '新規登録'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
+  posts:
+    create:
+      success: '投稿しました'
+      fail: '投稿に失敗しました'
+    update:
+      success: '編集しました'
+      fail: '編集に失敗しました'
+    destroy:
+      success: '投稿を削除しました'
