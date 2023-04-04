@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_26_183527) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_051139) do
   create_table "articles", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "fish_id"
     t.datetime "created_at", null: false
@@ -69,6 +69,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_183527) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "thumbnail_creators", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_thumbnail_creators_on_post_id"
+  end
+
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -85,4 +92,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_183527) do
   add_foreign_key "fish_tank_articles", "fish_tanks"
   add_foreign_key "posts", "articles"
   add_foreign_key "posts", "users"
+  add_foreign_key "thumbnail_creators", "posts"
 end
