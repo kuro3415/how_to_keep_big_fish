@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   belongs_to :article
-  has_one :thumbnail_creator, dependent: :destroy
+  has_one :thumbnail, dependent: :destroy
 
   mount_uploader :post_image, PostImageUploader
 end
