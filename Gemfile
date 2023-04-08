@@ -89,6 +89,7 @@ gem "cancancan"
 
 # レイアウト用
 gem "cssbundling-rails"
+gem "font-awesome-sass"
 
 gem "rails-i18n"
 
