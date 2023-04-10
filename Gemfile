@@ -99,3 +99,5 @@ gem "mini_magick"
 # AWS
 gem "fog-aws"
 gem "aws-sdk-s3", require: false
+
+gem "twitter"
