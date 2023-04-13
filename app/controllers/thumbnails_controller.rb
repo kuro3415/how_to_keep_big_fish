@@ -1,7 +1,11 @@
 class ThumbnailsController < ApplicationController
+  before_action :set_twitter_api
+
   def create
-    @post = Post.find(params[:post_id])
-    image = ThumbnailCreator.build(@post.user.name, @post.article.fish.name, @post.post_image).tempfile.open.read
-    send_data image, :type => 'image/png',:disposition => 'inline'
+    @thumbnail = Thumbnail.find(2)
+
+    image_path = @thumbnail.thumbnail_image
+
+    redirect_to "https://twitter.com/share?url=#{image_path.to_s}", allow_other_host: true
   end
 end

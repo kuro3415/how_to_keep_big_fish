@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   # 各ページのイメージ画像、SNS等でシェアされた際に活用
-  def og_image(page_image = '')
+  def og_image(page_image = '/images/sample.jpg')
     base_image = ""
     if page_image.empty?
       base_image
