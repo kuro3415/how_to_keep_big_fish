@@ -11,8 +11,7 @@ div.container.container-m
         div.d-flex.justify-content-end
           - if current_user&.own?(post)
             div.mt-3
-              = link_to 'twitter', article_post_thumbnails_path(post.article, post), method: :post, title: 'Twitter', target: '_blank'
-                
+              = link_to 'twitter', article_post_thumbnails_path(post.article, post), method: :post               
             div.mx-2.mt-2
               = link_to '編集', edit_article_post_path(post.article, post), class: 'btn btn-outline-secondary btn-block'
             div.mt-2
