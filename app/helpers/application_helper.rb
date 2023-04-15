@@ -31,7 +31,7 @@ module ApplicationHelper
 
   # 各ページのイメージ画像、SNS等でシェアされた際に活用
   def og_image(page_image = '')
-    base_image = ""
+    base_image = "https://howtokeepbigfish.s3.amazonaws.com/uploads/thumbnail/thumbnail_image/39/mini_magick20230415-2-qw4ri9.jpg"
     if page_image.empty?
       base_image
     else
