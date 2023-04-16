@@ -11,14 +11,14 @@ html
     meta property="og:title" content="#{full_title(yield(:og_title))}"
     meta property="og:description" content="#{og_description(yield(og_description))}"
     meta property="og:url" content="#{request.url}"
-    meta property="og:image" content="#{og_image(yield(:image))}"
+    meta property="og:image" content="#{og_image(yield(:og_image))}"
     meta property="og:site_name" content="HowToKeepBigFish"
     meta property="og:type" content="article"
 
     / twitter用のOGP
     meta name="twitter:card" content="summary_large_image"
     meta name="twitter:site" content="@6DJvWYGbldq9wya"
-    meta name="twitter:image" content="#{og_image(yield(:image))}"
+    meta name="twitter:image" content="#{og_image(yield(:og_image))}"
     meta name="twitter:title" content="#{full_title(yield(:og_title))}"
     meta name="twitter:description" content="#{og_description(yield(og_description))}"
 
