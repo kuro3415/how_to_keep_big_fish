@@ -1,5 +1,5 @@
 class ThumbnailsController < ApplicationController
-  before_action :set_twitter_api
+  skip_before_action :require_login, only: %i[show]
 
   def show
     @post = Post.find(params[:post_id])
