@@ -101,3 +101,6 @@ gem "fog-aws"
 gem "aws-sdk-s3", require: false
 
 gem "twitter"
+
+gem 'rspec-rails'
+gem 'factory_bot_rails'
