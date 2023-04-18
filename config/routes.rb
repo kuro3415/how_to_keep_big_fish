@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[show new create]
   resources :articles, only: %i[show index] do
     resources :posts, only: %i[show create edit update destroy] do
-      resources :thumbnails, only: %i[create]
+      resources :thumbnails, only: %i[show create]
     end
   end
 

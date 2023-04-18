@@ -1,0 +1,14 @@
+- provide(:og_image, "#{@post.thumbnail.thumbnail_image}")
+- provide(:og_title, "サムネイル成功")
+
+div.container
+  div.d-flex.align-items-center.justify-content-center.mt-5.mb-3
+    h2 投稿するサムネイル
+
+div.container
+  div.d-flex.align-items-center.justify-content-center.mt-3.mb-3
+    img.rounded.post-img src="#{@post.thumbnail.thumbnail_image}" width='400'
+
+div.container
+  div.d-flex.align-items-center.justify-content-center.mt-3.mb-3
+    = link_to 'twitterシェア' , "https://twitter.com/share?url=#{request.url}&text=#{@post.body}", { allow_other_host: true, target: "_blank" }
