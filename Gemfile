@@ -102,5 +102,8 @@ gem "aws-sdk-s3", require: false
 
 gem "twitter"
 
+# テスト関係
 gem 'rspec-rails'
 gem 'factory_bot_rails'
+gem 'capybara'
+gem 'webdrivers'
