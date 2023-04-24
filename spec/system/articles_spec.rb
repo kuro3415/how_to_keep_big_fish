@@ -188,7 +188,175 @@ RSpec.describe "Articles", type: :system do
         select '90', from: 'depth'
         select '90', from: 'length'
         expect(page).to have_css('img.fish_tank_img')
-        expect(page).to have_selector("img[src$='/images/fish_tanks/front/120x90x90.jpg']")
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/120x60x90.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x60x45に変更' do
+      it '150x60x45の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '45', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x45.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x60x60に変更' do
+      it '150x60x60の水槽の画像が表示される' do
+        select '150', from: 'width'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x60.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x60x90に変更' do
+      it '150x60x90の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '90', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x90.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x45x45に変更' do
+      it '150x45x45の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '45', from: 'depth'
+        select '45', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x45.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x45x60に変更' do
+      it '150x45x60の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '45', from: 'depth'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x60.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x45x90に変更' do
+      it '150x45x90の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '45', from: 'depth'
+        select '90', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x90.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x90x45に変更' do
+      it '150x90x45の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '90', from: 'depth'
+        select '45', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x45.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x90x60に変更' do
+      it '150x90x60の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '90', from: 'depth'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x60.jpg']")
+      end
+    end
+
+    context '水槽サイズを150x90x90に変更' do
+      it '150x90x90の水槽の画像が表示される' do
+        select '150', from: 'width'
+        select '90', from: 'depth'
+        select '90', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/150x60x90.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x60x45に変更' do
+      it '180x60x45の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '45', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x45.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x60x60に変更' do
+      it '180x60x60の水槽の画像が表示される' do
+        select '180', from: 'width'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x60.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x60x90に変更' do
+      it '180x60x90の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '90', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x90.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x45x45に変更' do
+      it '180x45x45の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '45', from: 'depth'
+        select '45', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x45.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x45x60に変更' do
+      it '180x45x60の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '45', from: 'depth'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x60.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x45x90に変更' do
+      it '180x45x90の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '45', from: 'depth'
+        select '90', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x90.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x90x45に変更' do
+      it '180x90x45の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '90', from: 'depth'
+        select '45', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x45.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x90x60に変更' do
+      it '180x90x60の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '90', from: 'depth'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x60.jpg']")
+      end
+    end
+
+    context '水槽サイズを180x90x90に変更' do
+      it '180x90x90の水槽の画像が表示される' do
+        select '180', from: 'width'
+        select '90', from: 'depth'
+        select '90', from: 'length'
+        expect(page).to have_css('img.fish_tank_img')
+        expect(page).to have_selector("img[src$='/images/fish_tanks/front/180x60x90.jpg']")
       end
     end
   end
