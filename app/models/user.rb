@@ -12,6 +12,9 @@ class User < ApplicationRecord
   enum role: { general: 0, admin: 1 }
 
   has_many :posts, dependent: :destroy
+  has_many :authentications, dependent: :destroy
+
+  accepts_nested_attributes_for :authentications
 
   def own?(object)
     id == object.user_id
