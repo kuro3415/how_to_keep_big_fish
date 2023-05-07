@@ -13,3 +13,5 @@ div.container.d-flex.align-items-center.justify-content-center
           div.row.center-block.text-center
             div.form-group.m-3
               = f.submit 'ログイン', class: 'btn btn-outline-secondary btn-block col-3'
+  div
+    = link_to 'twitterログイン', auth_at_provider_path(provider: :twitter)
