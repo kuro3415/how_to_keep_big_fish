@@ -117,10 +117,10 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.twitter.key = ENV['CONSUMER_KEY']
   config.twitter.secret = ENV['CONSUMER_SECRET']
-  config.twitter.callback_url = "https://how-to-keep-big-fish.herokuapp.com/oauth/callback?provider=twitter"
+  config.twitter.callback_url = "https://how-to-keep-big-fish.herokuapp.com/oauth/callback?"
   config.twitter.user_info_mapping = {
     name: 'name',
-    description: 'description'
+    email: 'email'
   }
   #
   # config.facebook.key = ""
