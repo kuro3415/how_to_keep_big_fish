@@ -120,7 +120,7 @@ Rails.application.config.sorcery.configure do |config|
   config.twitter.callback_url = "https://how-to-keep-big-fish.herokuapp.com/oauth/callback?"
   config.twitter.user_info_mapping = {
     name: 'name',
-    description: 'description'
+    email: 'email'
   }
   #
   # config.facebook.key = ""
