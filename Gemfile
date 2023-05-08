@@ -107,3 +107,5 @@ gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem 'capybara'
 gem 'webdrivers'
+
+gem 'pry-rails'
