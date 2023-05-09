@@ -108,4 +108,8 @@ gem 'factory_bot_rails'
 gem 'capybara'
 gem 'webdrivers'
 
+# デバッグ用
 gem 'pry-rails'
+
+# 定数管理用
+gem 'config'
