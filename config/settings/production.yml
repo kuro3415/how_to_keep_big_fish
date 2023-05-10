@@ -1,2 +1,2 @@
 sorcery:
-  callback_url: 'https://how-to-keep-big-fish.herokuapp.com/oauth/callback?'
+  callback_url: 'https://how-to-keep-big-fish.herokuapp.com/oauth/callback?provider=twitter'
