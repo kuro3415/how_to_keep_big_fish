@@ -7,7 +7,7 @@ class OauthsController < ApplicationController
 
   def callback
     provider = auth_params[:provider]
-    
+
     if auth_params[:denied].present?
       redirect_to root_path, success: ('Twitterアカウントでのアカウント作成に成功しました')
       return
