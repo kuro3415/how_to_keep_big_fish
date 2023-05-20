@@ -6,6 +6,6 @@ div.container.container-m
         td= @user.name
       tr
         th メールアドレス
-        td= @user.email
+        td= @user.email? ? @user.email : 'emailが未登録です'
 
 = render 'posts/post'
