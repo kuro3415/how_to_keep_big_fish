@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root 'top#index'
 
-  resources :users, only: %i[show new create]
+  resources :users, only: %i[show new create edit update destroy]
   resources :articles, only: %i[show index] do
     resources :posts, only: %i[show create edit update destroy] do
       resources :thumbnails, only: %i[show create]
