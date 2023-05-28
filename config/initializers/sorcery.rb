@@ -117,21 +117,21 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.twitter.key = ENV['CONSUMER_KEY']
   config.twitter.secret = ENV['CONSUMER_SECRET']
-  config.twitter.callback_url = Settings.sorcery[:callback_url]
+  config.twitter.callback_url = Settings.sorcery.twitter[:callback_url]
   config.twitter.user_info_mapping = {
     name: 'name'
   }
   #
-  config.facebook.key = ""
-  config.facebook.secret = ""
-  config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
+  config.facebook.key = ENV['FACEBOOK_ID']
+  config.facebook.secret = ENV['FACEBOOK_SECRET_KEY']
+  config.facebook.callback_url = Settings.sorcery.facebook[:callback_url]
   config.facebook.user_info_path = "me?fields=name"
   config.facebook.user_info_mapping = {
     name: 'name'
   }
   # config.facebook.access_permissions = ["email"]
   config.facebook.display = "page"
-  config.facebook.api_version = "v2.3"
+  config.facebook.api_version = "v17.0"
   config.facebook.parse = :json
   #
   # config.instagram.key = ""
