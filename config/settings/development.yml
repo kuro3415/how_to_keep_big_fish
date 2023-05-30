@@ -1,5 +1,7 @@
 sorcery:
   twitter:
-    callback_url: 'https://127.0.0.1:3000/oauth/callback?provider=twitter'
+    callback_url: 'http://127.0.0.1:3000/oauth/callback?provider=twitter'
   facebook:
-    callback_url: 'https://127.0.0.1:3000/oauth/callback?provider=facebook'
+    callback_url: 'https://localhost:9292/oauth/callback?provider=facebook'
+  google:
+    callback_url: 'http://127.0.0.1:3000/oauth/callback?provider=google'
