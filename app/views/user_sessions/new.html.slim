@@ -14,7 +14,12 @@ div.container.d-flex.align-items-center.justify-content-center
             div.form-group.m-3
               = f.submit 'ログイン', class: 'btn btn-outline-secondary btn-block col-3'
 div.container.d-flex.align-items-center.justify-content-center
-  div.m-5
-    = link_to 'twitterログイン', auth_at_provider_path(provider: :twitter)
-  div.m-5
-    = link_to 'Googleログイン', auth_at_provider_path(provider: :google)
+  div.mt-4.text-center
+    = link_to auth_at_provider_path(provider: :twitter), class: "social-login-button twitter" do
+      i.fa-brands.fa-twitter.fa-2x
+      span Twitterログイン
+div.container.d-flex.align-items-center.justify-content-center
+  div.mt-3.text-center
+    = link_to auth_at_provider_path(provider: :google), class: "social-login-button google" do
+      i.fa-brands.fa-google.fa-2x
+      span Googleログイン
