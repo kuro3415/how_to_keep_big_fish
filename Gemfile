@@ -113,3 +113,5 @@ gem 'pry-rails'
 
 # 定数管理用
 gem 'config'
+
+gem 'font-awesome-sass'
