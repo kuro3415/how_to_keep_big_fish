@@ -9,16 +9,16 @@ class OauthsController < ApplicationController
     provider = auth_params[:provider]
 
     if auth_params[:denied].present?
-      redirect_to root_path, success: ('Twitterアカウントでのアカウント作成に成功しました')
+      redirect_to root_path, success: ("#{provider}アカウントでのアカウント作成に成功しました")
       return
     end
 
     begin
       create_user_from(provider) unless (@user = login_from(provider))
-      redirect_to root_path, success: ('Twitterアカウントでのログインに成功しました')
+      redirect_to root_path, success: ("#{provider}アカウントでログインしました")
 
     rescue StandardError
-      redirect_to root_path, danger: ('Twitterアカウントでのログインに失敗しました')
+      redirect_to root_path, danger: ("#{provider}アカウントでログインに失敗しました")
     end
   end
 
