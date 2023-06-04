@@ -15,11 +15,14 @@ div.container.d-flex.align-items-center.justify-content-center
               = f.submit 'ログイン', class: 'btn btn-outline-secondary btn-block col-3'
 div.container.d-flex.align-items-center.justify-content-center
   div.mt-4.text-center
+    h3 or              
+div.container.d-flex.align-items-center.justify-content-center
+  div.mt-4.text-center
     = link_to auth_at_provider_path(provider: :twitter), class: "social-login-button twitter" do
-      i.fa-brands.fa-twitter.fa-2x
-      span Twitterログイン
+      i.fa-brands.fa-twitter.fa-xl
+      span Twitterアカウントでログイン
 div.container.d-flex.align-items-center.justify-content-center
   div.mt-3.text-center
     = link_to auth_at_provider_path(provider: :google), class: "social-login-button google" do
-      i.fa-brands.fa-google.fa-2x
-      span Googleログイン
+      i.fa-brands.fa-google.fa-xl
+      span Googleアカウントでログイン

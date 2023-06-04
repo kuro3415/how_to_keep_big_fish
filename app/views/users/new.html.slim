@@ -19,3 +19,16 @@ div.container.d-flex.align-items-center.justify-content-center
           div.row.center-block.text-center
             div.form-group.m-3
               = f.submit '登録', class: 'btn btn-outline-secondary btn-block col-3'
+div.container.d-flex.align-items-center.justify-content-center
+  div.mt-4.text-center
+    h3 or
+div.container.d-flex.align-items-center.justify-content-center
+  div.mt-4.text-center
+    = link_to auth_at_provider_path(provider: :twitter), class: "social-login-button twitter" do
+      i.fa-brands.fa-twitter.fa-xl
+      span Twitterアカウントで登録
+div.container.d-flex.align-items-center.justify-content-center
+  div.mt-3.text-center
+    = link_to auth_at_provider_path(provider: :google), class: "social-login-button google" do
+      i.fa-brands.fa-google.fa-xl
+      span Googleアカウントで登録
